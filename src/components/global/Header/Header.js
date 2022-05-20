@@ -80,7 +80,7 @@ const Header = () => {
 
       <div className="header__actions">
         <div className="actions__login">
-          <AiOutlineUser /> <span>Login / Register</span>
+          <AiOutlineUser /> <span>Login/Register</span>
         </div>
         <div className="actions__search">
           <AiOutlineSearch onClick={handleSearchToggle} /> <span onClick={handleSearchToggle}>Search</span>
