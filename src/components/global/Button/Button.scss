@@ -1,0 +1,45 @@
+@use "../../../scss/utilities/" as *;
+
+.button {
+  padding: rem(15) rem(40);
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button--primary {
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
+  transition: box-shadow 250ms ease-in-out;
+  &:hover {
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.button--white {
+  background-color: transparent;
+  border: 1px solid var(--clr-white);
+  color: var(--clr-white);
+  transition: all 250ms ease-in-out;
+  &:hover {
+    background-color: var(--clr-white);
+    color: black;
+  }
+}
+
+.button--blue {
+  background-color: transparent;
+  border: 1px solid var(--clr-primary);
+  color: var(--clr-primary);
+  transition: all 250ms ease-in-out;
+  &:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+  }
+}
+
+.button--rounded {
+  border-radius: 500px;
+}

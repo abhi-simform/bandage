@@ -1,0 +1,36 @@
+@use "../../../scss/utilities/" as *;
+
+.topbar {
+  background-color: var(--clr-title);
+  color: var(--clr-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: rem(14);
+  line-height: rem(24);
+  font-weight: 700;
+  padding: rem(20) rem(40) rem(15) rem(10);
+  display: none;
+  @include breakpoint(lg) {
+    display: flex;
+  }
+}
+
+.topbar__left {
+  display: flex;
+  align-items: center;
+  svg {
+    margin-inline: rem(30) rem(5);
+  }
+}
+
+.topbar__right {
+  display: flex;
+  align-items: center;
+  gap: rem(15);
+  svg {
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+  }
+}

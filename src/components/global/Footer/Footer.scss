@@ -1,0 +1,122 @@
+@use "../../../scss/utilities/" as *;
+
+.footer {
+  font-weight: 700;
+}
+
+.footer__top {
+  padding: rem(55) rem(25);
+  background-color: var(--clr-ligt-bg);
+  .container {
+    @include breakpoint(md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-content: center;
+    }
+  }
+}
+
+.footer__title {
+  font-size: rem(24);
+  line-height: rem(32);
+}
+
+.footer__social {
+  display: flex;
+  gap: rem(22);
+  margin-top: rem(25);
+  svg {
+    color: var(--clr-primary);
+    width: rem(25);
+    height: auto;
+  }
+  @include breakpoint(md) {
+    margin-top: 0;
+  }
+}
+
+.footer__middle {
+  padding: rem(70) rem(25);
+  .container {
+    @include breakpoint(md) {
+      display: flex;
+      flex-wrap: wrap;
+      position: relative;
+      & > * {
+        flex-grow: 1;
+        flex-basis: 50%;
+        width: 100%;
+      }
+    }
+    @include breakpoint(xl) {
+      display: grid;
+      grid-template-columns: 2fr 2fr 2fr 2fr 4fr;
+    }
+  }
+}
+
+.footer__list {
+  margin-bottom: rem(30);
+}
+
+.footer__list__header {
+  margin-bottom: rem(20);
+  font-size: rem(16);
+}
+
+.footer__item {
+  margin-bottom: rem(10);
+  font-size: rem(14);
+  line-height: rem(24);
+}
+
+.footer__form__form {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  gap: rem(5);
+  .footer__form__input {
+    padding: rem(15) rem(20);
+    border: solid 1px #e6e6e6;
+    font-weight: 400;
+    font-size: rem(14);
+  }
+  .button {
+    padding: rem(15) rem(20);
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+  }
+  @media (min-width: 400px) {
+    flex-direction: row;
+    gap: 0;
+    .button {
+      border-radius: 0;
+    }
+  }
+}
+
+.form__indicator {
+  font-size: rem(12);
+  line-height: rem(28);
+  font-weight: 400;
+}
+
+.footer__bottom {
+  padding: rem(25);
+  background-color: var(--clr-lighter-bg);
+  font-size: rem(14);
+  line-height: rem(24);
+  text-align: center;
+  @include breakpoint(md) {
+    text-align: left;
+  }
+}
+
+.footer__attribute {
+  max-width: rem(200);
+  margin-inline: auto;
+  @include breakpoint(md) {
+    max-width: unset;
+  }
+}

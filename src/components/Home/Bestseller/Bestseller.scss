@@ -1,0 +1,52 @@
+@use "../../../scss/utilities/" as *;
+
+.bestseller-container {
+  text-align: center;
+  .button--blue {
+    margin-top: rem(55);
+  }
+}
+
+.bestseller__header {
+  max-width: rem(240);
+  margin-inline: auto;
+  @include breakpoint(sm) {
+    max-width: unset;
+  }
+}
+
+.bestseller__name {
+  font-size: rem(20);
+  line-height: rem(30);
+  margin-bottom: rem(10);
+}
+
+.bestseller__title {
+  text-transform: uppercase;
+  font-size: rem(24);
+  line-height: rem(32);
+  margin-bottom: rem(10);
+}
+
+.bestseller__description {
+  font-size: rem(14);
+  line-height: rem(20);
+}
+
+.bestseller-cards {
+  margin-top: rem(60);
+  display: grid;
+  gap: rem(30);
+  @include breakpoint(sm) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @include breakpoint(md) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @include breakpoint(lg) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  @include breakpoint(xl) {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}

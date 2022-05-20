@@ -1,0 +1,49 @@
+@use "../../../scss/utilities/" as *;
+
+.services-container {
+  .bestseller__header {
+    max-width: rem(260);
+    text-align: center;
+    @include breakpoint(md) {
+      max-width: unset;
+    }
+  }
+}
+
+.services-cards {
+  text-align: center;
+  margin-top: rem(50);
+  @include breakpoint(md) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.services-card {
+  // margin-bottom: rem(10);
+  padding: rem(50);
+  @include breakpoint(md) {
+    margin-bottom: 0;
+    padding-inline: 0;
+  }
+}
+
+.service-card__icon {
+  width: rem(60);
+  height: auto;
+  fill: var(--clr-primary);
+  margin-bottom: rem(30);
+}
+
+.service-card__title {
+  margin-bottom: rem(20);
+  font-size: rem(24);
+  line-height: rem(32);
+}
+
+.service-card__description {
+  // margin-bottom: rem(30);
+  font-size: rem(14);
+  max-width: rem(225);
+  margin-inline: auto;
+}

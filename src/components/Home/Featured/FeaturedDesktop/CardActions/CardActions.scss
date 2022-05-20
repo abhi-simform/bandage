@@ -1,0 +1,35 @@
+@use "../../../../../scss/utilities/" as *;
+
+.left__actions {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: rem(10);
+  padding-bottom: rem(25);
+  div {
+    aspect-ratio: 1/1;
+    padding: rem(5) rem(10);
+    background-color: white;
+    border-radius: rem(1000);
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      background-color: var(--clr-primary);
+      svg {
+        fill: var(--clr-white);
+      }
+    }
+  }
+  svg {
+    transition: all 300ms ease-in-out;
+    fill: var(--clr-body);
+    width: rem(20);
+    // height: rem(20);
+    height: auto;
+    vertical-align: bottom;
+    // border-radius: rem(1000);
+    // background-color: var(--clr-white);
+  }
+}

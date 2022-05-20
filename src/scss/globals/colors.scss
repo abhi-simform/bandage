@@ -1,0 +1,18 @@
+@use "../utilities/" as *;
+
+:root {
+  --clr-primary: hsl(202, 87%, 54%);
+  --clr-title: hsl(228, 28%, 20%);
+  --clr-body: hsl(0, 0%, 45%);
+  --clr-muted: hsl(0, 0%, 74%);
+  --clr-blue-bg: hsla(202, 62%, 46%, 0.75);
+  --clr-ligt-bg: hsl(0, 0%, 98%);
+  --clr-lighter-bg: hsl(0, 0%, 98%);
+  --clr-input-border: hsl(0, 0%, 90%);
+  --clr-green: hsl(165, 58%, 33%);
+  --clr-orange: hsl(22, 78%, 58%);
+  --clr-yellow: hsl(46, 100%, 60%);
+  --clr-red: hsl(0, 78%, 58%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+}

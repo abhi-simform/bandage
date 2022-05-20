@@ -1,0 +1,237 @@
+@use "../../../scss/utilities/" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 22;
+  display: flex;
+  align-items: center;
+  padding: rem(25) rem(40) rem(20) rem(40);
+  background-color: var(--clr-white);
+  font-weight: 700;
+  @include breakpoint-down(lg) {
+    display: grid;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    grid-template-areas:
+      "logo actions"
+      "nav-list nav-list";
+    overflow: visible;
+  }
+}
+
+.header__logo {
+  font-size: rem(24);
+  line-height: rem(32);
+  color: var(--clr-title);
+  @include breakpoint(lg) {
+    margin-right: rem(20);
+  }
+  @include breakpoint(xl) {
+    margin-right: rem(120);
+  }
+  @include breakpoint-down(lg) {
+    grid-area: logo;
+  }
+}
+
+.actions__hamburger {
+  display: none;
+  @include breakpoint-down(lg) {
+    display: block;
+  }
+}
+
+.nav__list {
+  text-align: center;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  @include breakpoint(lg) {
+    display: flex;
+    gap: rem(20);
+    max-height: unset;
+    overflow: visible;
+  }
+  @include breakpoint-down(lg) {
+    grid-area: nav-list;
+  }
+}
+
+.nav__list--active {
+  max-height: 1000px;
+  padding-block: rem(90);
+}
+
+.nav__item {
+  position: relative;
+  font-weight: 400;
+  font-size: rem(30);
+  line-height: rem(45);
+  margin-bottom: rem(30);
+  cursor: pointer;
+  @include breakpoint(lg) {
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: rem(24);
+    margin-bottom: 0;
+  }
+}
+
+.subnav-handle {
+  position: relative;
+}
+
+.subnav__list {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+  color: var(--clr-primary);
+  @include breakpoint(lg) {
+    // overflow: visible;
+    // max-height: unset;
+    width: 400%;
+    background-color: var(--clr-white);
+    position: absolute;
+    z-index: 111;
+  }
+}
+
+.subnav__list--active {
+  padding-block: rem(20);
+  max-height: 1000px;
+  @include breakpoint(lg) {
+    padding: rem(20) rem(40);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.subnav__item {
+  @include breakpoint(lg) {
+    margin-bottom: rem(10);
+  }
+}
+
+.header__actions {
+  display: flex;
+  gap: rem(10);
+  align-items: center;
+  margin-left: auto;
+  @include breakpoint(lg) {
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: var(--clr-primary);
+  }
+  @include breakpoint(xl) {
+    gap: rem(30);
+  }
+  @include breakpoint-down(lg) {
+    grid-area: actions;
+  }
+  & > div {
+    cursor: pointer;
+    position: relative;
+  }
+  & > div > span {
+    margin-left: rem(5);
+  }
+}
+
+.actions__search {
+  svg {
+    width: rem(24);
+    height: rem(24);
+    @include breakpoint(lg) {
+      width: rem(16);
+      height: rem(16);
+    }
+  }
+  span {
+    display: none;
+    @include breakpoint(lg) {
+      display: inline;
+    }
+  }
+  @include breakpoint(lg) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.action__search__search {
+  position: absolute;
+  top: 120%;
+  right: 0%;
+  transition: all 300ms ease-in-out;
+  border: none;
+  border-radius: rem(3);
+  max-width: 0;
+  &::placeholder {
+    color: var(--clr-primary);
+    font-size: rem(14);
+  }
+}
+
+.action__search__search--active {
+  max-width: 1000px;
+  padding: rem(10) rem(20);
+  border: 1px solid var(--clr-primary);
+}
+
+.actions__cart {
+  svg {
+    width: rem(24);
+    height: rem(24);
+    @include breakpoint(lg) {
+      width: rem(16);
+      height: rem(16);
+    }
+  }
+  span {
+    display: none;
+    @include breakpoint(lg) {
+      display: inline;
+    }
+  }
+  @include breakpoint(lg) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.actions__hamburger {
+  svg {
+    width: rem(24);
+    height: rem(24);
+  }
+}
+
+.actions__heart {
+  display: none;
+  svg {
+    @include breakpoint(lg) {
+      width: rem(16);
+      height: rem(16);
+    }
+  }
+  @include breakpoint(lg) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.actions__login {
+  display: none;
+  svg {
+    @include breakpoint(lg) {
+      width: rem(16);
+      height: rem(16);
+    }
+  }
+  @include breakpoint(lg) {
+    display: flex;
+    align-items: center;
+  }
+}

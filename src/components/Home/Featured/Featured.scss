@@ -1,0 +1,28 @@
+@use "../../../scss/utilities/" as *;
+
+.featured-container {
+  .wedo__title {
+    text-align: center;
+  }
+  .wedo__tagline {
+    text-align: center;
+  }
+}
+
+.featured-mobile {
+  margin-top: rem(65);
+  @include breakpoint(lg) {
+    margin-top: 0;
+    display: none;
+  }
+}
+
+.featured-desktop {
+  display: none;
+  @include breakpoint(lg) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(30);
+    margin-top: rem(80);
+  }
+}

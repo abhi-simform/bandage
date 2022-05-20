@@ -1,0 +1,43 @@
+@use "../../../scss/utilities/" as *;
+
+.clients {
+  padding-block: rem(140) rem(100);
+  @include breakpoint(xl) {
+    padding-block: rem(50);
+  }
+}
+
+.clients-container {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+  gap: rem(60);
+  &:hover > a:not(:hover) {
+    filter: blur(5px);
+  }
+  a {
+    transition: filter 250ms ease-in-out;
+    width: rem(150);
+    @include breakpoint(lg) {
+      width: rem(100);
+    }
+    img {
+      width: 100%;
+      @include breakpoint(lg) {
+        width: unset;
+      }
+    }
+  }
+  @include breakpoint(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include breakpoint(xl) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

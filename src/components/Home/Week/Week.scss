@@ -1,0 +1,73 @@
+@use "../../../scss/utilities/" as *;
+
+.week {
+  padding-bottom: rem(25);
+  @include breakpoint(lg) {
+    padding-bottom: rem(80);
+  }
+}
+
+.week-container {
+  max-width: 1180px;
+  @include breakpoint(lg) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(15);
+  }
+}
+
+.week-card {
+  position: relative;
+  &:nth-child(1) {
+    aspect-ratio: 345/555;
+    @include breakpoint(lg) {
+      aspect-ratio: 1/ 1;
+      grid-row: 1 /3;
+      grid-column: 1 /2;
+    }
+  }
+  &:nth-child(2),
+  &:nth-child(3) {
+    aspect-ratio: 345/400;
+    margin-top: rem(15);
+    .week-content {
+      @include breakpoint(lg) {
+        padding: rem(40) rem(50) rem(30) rem(35);
+      }
+    }
+    @include breakpoint(lg) {
+      margin-top: 0;
+      aspect-ratio: 2 /1;
+    }
+  }
+}
+
+.week__image {
+  vertical-align: bottom;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.week-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--clr-blue-bg);
+  width: 100%;
+  padding: rem(60) rem(100) rem(40) rem(40);
+  .button--white {
+    font-size: rem(14);
+    line-height: rem(22);
+  }
+  @include breakpoint(lg) {
+    width: 70%;
+  }
+}
+
+.week__title {
+  color: var(--clr-white);
+  margin-bottom: rem(25);
+  font-size: rem(24);
+  line-height: rem(32);
+}

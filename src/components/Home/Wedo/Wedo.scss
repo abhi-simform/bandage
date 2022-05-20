@@ -1,0 +1,53 @@
+@use "../../../scss/utilities/" as *;
+
+.wedo-container {
+  @include breakpoint(lg) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.wedo-right {
+  padding-inline: rem(50);
+  margin-bottom: rem(50);
+  @include breakpoint(lg) {
+    order: 1;
+    padding-left: rem(90);
+    padding-right: 0;
+  }
+}
+
+.wedo__title {
+  font-weight: 700;
+  font-size: rem(16);
+  margin-bottom: rem(15);
+  color: var(--clr-primary);
+}
+
+.wedo__tagline {
+  font-size: rem(40);
+  line-height: rem(50);
+  margin-bottom: rem(15);
+}
+
+.wedo__description {
+  font-size: rem(14);
+  letter-spacing: 0.2px;
+  p {
+    margin-bottom: rem(15);
+  }
+  @include breakpoint(xl) {
+    max-width: rem(350);
+  }
+}
+
+.wedo__images {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: stretch;
+  justify-items: stretch;
+  gap: rem(10);
+  img {
+    object-fit: cover;
+  }
+}
