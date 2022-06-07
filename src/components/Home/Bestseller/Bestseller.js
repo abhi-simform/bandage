@@ -2,16 +2,16 @@ import "./Bestseller.scss";
 import BestsellerCard from "./BestsellerCard/BestsellerCard";
 import Button from "../../global/Button/Button";
 
-import Bestseller01 from "../../../assets/images/bestseller/bestseller01.jpg";
-import Bestseller02 from "../../../assets/images/bestseller/bestseller02.jpg";
-import Bestseller03 from "../../../assets/images/bestseller/bestseller03.jpg";
-import Bestseller04 from "../../../assets/images/bestseller/bestseller04.jpg";
-import Bestseller05 from "../../../assets/images/bestseller/bestseller05.jpg";
-import Bestseller06 from "../../../assets/images/bestseller/bestseller06.jpg";
-import Bestseller07 from "../../../assets/images/bestseller/bestseller07.jpg";
-import Bestseller08 from "../../../assets/images/bestseller/bestseller08.jpg";
-import Bestseller09 from "../../../assets/images/bestseller/bestseller09.jpg";
-import Bestseller10 from "../../../assets/images/bestseller/bestseller10.jpg";
+import Bestseller01 from "../../../assets/images/bestseller/bestseller01.webp";
+import Bestseller02 from "../../../assets/images/bestseller/bestseller02.webp";
+import Bestseller03 from "../../../assets/images/bestseller/bestseller03.webp";
+import Bestseller04 from "../../../assets/images/bestseller/bestseller04.webp";
+import Bestseller05 from "../../../assets/images/bestseller/bestseller05.webp";
+import Bestseller06 from "../../../assets/images/bestseller/bestseller06.webp";
+import Bestseller07 from "../../../assets/images/bestseller/bestseller07.webp";
+import Bestseller08 from "../../../assets/images/bestseller/bestseller08.webp";
+import Bestseller09 from "../../../assets/images/bestseller/bestseller09.webp";
+import Bestseller10 from "../../../assets/images/bestseller/bestseller10.webp";
 
 const bestsellerData = [
   {
